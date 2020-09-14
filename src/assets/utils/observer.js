@@ -1,0 +1,1 @@
+class ObserverEvent{constructor(){this._listeners=[],this._index=0}attach(s){const e={id:this._index,observer:s};return this._listeners.push(e),this._index+=1,e.id}detach(s){this._listeners=this._listeners.filter(e=>e.id!==s)}notifyObservers(s){this._listeners.forEach(e=>e.observer(s))}}
